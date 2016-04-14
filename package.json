@@ -1,0 +1,11 @@
+{
+  "name": "etherserial",
+  "version": "0.0.1",
+  "description": "Raw ethernet serial transport for Frimata.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Lennard <john@yakmoo.se> (https://yakmoose.nz)",
+  "license": "MIT"
+}
