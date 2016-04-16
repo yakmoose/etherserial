@@ -3,7 +3,7 @@
 
 EtherSerial is a transport layer that works in conjunction with [Firmata.js](https://github.com/firmata/firmata.js) to enable
 communication with serial devices over ethernet using tools such as [ser2net](http://ser2net.sourceforge.net/), or the
-[pySerial bridge examples](https://pythonhosted.org/pyserial/examples.html#tcp-ip-serial-bridge) (It does not, at this point support RFC2217).
+[pySerial bridge examples](https://pythonhosted.org/pyserial/examples.html#tcp-ip-serial-bridge) (It does not, at this point support RFC2217 for setting port properties).
 
 
 This work is based on [Rick Waldron's EtherPort](https://github.com/rwaldron/etherport) for ethernet/wifi enabled Arduino devices.
@@ -19,7 +19,17 @@ Firstly you will need an Arduino running Standard Firmata, this ships with the l
 You will also need to install an application such as ser2net or the pySerial serial bridge (These are the only serial redirectors
 that have been tested).
 
+After installing StandardFrimata and connecting the Arduino to the remote machine you can start your serial port redirector (tcp_serial_redirect.py on a RaspberryPi in this example):
+```bash
+python tcp_serial_redirect.py --parity N -P 3030 /dev/ttyAMA0 57600
+```
 
+Once the Arduino and remote machine are configured and the serial port redirector is running you can install Johnny-Five and EtherSerial:
+```bash
+npm install johnny-five etherport
+```
+
+To test:
 ```js
 var five = require("../lib/johnny-five.js");
 var EtherSerial = require('etherserial');
