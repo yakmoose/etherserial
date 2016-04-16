@@ -26,7 +26,7 @@ python tcp_serial_redirect.py --parity N -P 3030 /dev/ttyAMA0 57600
 
 Once the Arduino and remote machine are configured and the serial port redirector is running you can install Johnny-Five and EtherSerial:
 ```bash
-npm install johnny-five etherport
+npm install johnny-five etherserial
 ```
 
 To test:

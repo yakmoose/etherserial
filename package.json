@@ -1,6 +1,6 @@
 {
   "name": "etherserial",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Raw ethernet serial transport for Frimata.js, based on etherport",
   "main": "lib/index.js",
   "directories": {
